@@ -18,24 +18,28 @@ public class Main {
 
         int max = 0;
         int ordine = 0;
-
-        if (a > b) {
-            max = a;
-            ordine = 1;
+        boolean x = false;
+        if ((a == b) || (c == a)) {
+            System.out.println("I 3 numeri sono uguali");
         } else {
-            max = b;
-            ordine = 2;
+            if (a > b) {
+                max = a;
+                ordine = 1;
+            } else {
+                max = b;
+                ordine = 2;
+            }
+
+
+            if (c > max) {
+                max = c;
+                ordine = 3;
+            }
+
+            System.out.println("Il numero maggiore è:" + max);
+
+            System.out.println("Il numero maggiore è il " + ordine + "° numero inserito ed è: " + max);
+
         }
-
-        if (c > max) {
-            max = c;
-            ordine = 3;
-        }
-
-        System.out.println("Il numero maggiore è:" + max);
-
-        System.out.println("Il numero maggiore è il " + ordine + "° numero inserito ed è "+ max);
-
-
     }
 }
